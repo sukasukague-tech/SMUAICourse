@@ -1,9 +1,9 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Enquiry &amp; Contact | The Freedom Program</title>
+<title>The Freedom Program | Enquiry</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
@@ -106,52 +106,57 @@
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
         }
-        .form-input-shadow:focus {
-            box-shadow: 0 0 0 4px rgba(0, 40, 142, 0.1);
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased">
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
-<div class="flex items-center gap-4">
-<a href="./index.html" class="font-headline-md text-primary tracking-tight">The Freedom Program</a>
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-6">
+<a href="./index.html" class="font-headline-md text-headline-md font-bold text-on-surface">The Freedom Program</a>
+<!-- Language Switcher -->
+<div class="hidden lg:flex items-center gap-4 border-l border-outline-variant pl-6">
+<select class="bg-transparent border-none text-label-md font-medium text-on-surface-variant focus:ring-0 cursor-pointer">
+<option value="en">English</option>
+<option value="zh">Mandarin</option>
+<option value="ms">Bahasa</option>
+<option value="ta">Tamil</option>
+</select>
 </div>
-<div class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
+</div>
+<nav class="hidden md:flex items-center gap-gutter font-label-md text-label-md">
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="./index.html">Offerings</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="./rtt-services.html">RTT Services</a>
-<a class="text-primary font-bold" href="#">Enquiry</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Booking</a>
-<div class="h-4 w-px bg-outline-variant mx-2"></div>
-<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary">
-<span class="material-symbols-outlined text-[18px]" data-icon="language">language</span>
-<span class="">EN</span>
-</button>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors">
-            Free Consultation
-        </button>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="./enquiry.html">Enquiry</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="./booking.html">Booking</a>
 </nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative h-[360px] flex items-center justify-center overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover" data-alt="Restorative dawn over water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB63dXpLGgpSS6FWLBJ5J0sR5x7uj_9HOVmcaA7FHJ0Qq8A6zXkimTm1OW-eSmkmMVj-1sokYfAJ5CYcBOaU3zbAE2nC3qMNv0HCQOMh4iYgCy4MpkF7rEubKILyKcT3TVGDT2KZFc4xBoiGuANhTEc_QQ39P9Cms04-SE_otFMJ3692oa6StBiYP5PFzsYJn9SD38jwDY-m0LhmfCC8Y-A5nUTyb6Z_XMJYMj4TwwOj8T_3iP6RKF8rOoeyd2JdlU3LNhh-6D0cw">
-<div class="absolute inset-0 bg-primary/20 backdrop-brightness-75"></div>
-<div class="relative z-10 text-center px-margin-mobile max-w-3xl">
-<h1 class="font-headline-xl text-headline-xl text-white mb-4">Connect &amp; Transform</h1>
-<p class="font-body-lg text-white/90">Questions about "The Freedom Program" or ready to begin? We're here to guide you toward peak performance and lasting calm.</p>
-</div>
-</section>
+<a href="./booking.html" class="bg-primary text-on-primary px-8 py-3 rounded-full text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all uppercase tracking-wider font-semibold">
+            Get Started
+        </a>
+</header>
+<main class="pt-20 overflow-x-hidden">
 <!-- Main Enquiry Content -->
 <section class="px-margin-mobile md:px-margin-desktop py-xl max-w-container-max mx-auto">
+<div class="max-w-3xl mb-xl reveal-on-scroll visible">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4 uppercase tracking-tight">Connect & Transform</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Questions about "The Freedom Program" or ready to begin? We're here to guide you toward peak performance and lasting calm.
+            </p>
+</div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
 <!-- Left: Contact Details -->
 <div class="md:col-span-5 space-y-md">
 <div>
-<h2 class="font-headline-lg text-on-surface mb-4">Ask us anything</h2>
+<h2 class="font-headline-md text-on-surface mb-4">Ask us anything</h2>
 <p class="font-body-md text-on-surface-variant">
                             Whether you're an executive looking for a performance edge or someone seeking relief from anxiety, our team is here to listen. Tell us about your journey.
                         </p>
@@ -169,7 +174,7 @@
 <div>
 <h3 class="font-label-md text-on-surface uppercase">Direct Support</h3>
 <p class="font-body-md text-on-surface-variant mb-2">Fastest for quick questions</p>
-<a class="inline-flex items-center gap-2 text-secondary font-bold hover:underline" href="#">
+<a class="inline-flex items-center gap-2 text-secondary font-bold hover:underline" href="./booking.html#discovery-call">
                                     Message a Consultant
                                     <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
@@ -190,20 +195,20 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="space-y-1.5">
 <label class="font-label-md text-on-surface-variant" for="firstName">First Name</label>
-<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none" id="firstName" name="firstName" required="" type="text">
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none font-body-md" id="firstName" name="firstName" required="" type="text">
 </div>
 <div class="space-y-1.5">
 <label class="font-label-md text-on-surface-variant" for="lastName">Last Name</label>
-<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none" id="lastName" name="lastName" type="text">
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none font-body-md" id="lastName" name="lastName" type="text">
 </div>
 </div>
 <div class="space-y-1.5">
 <label class="font-label-md text-on-surface-variant" for="email">Email Address *</label>
-<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none" id="email" name="email" placeholder="you@example.com" required="" type="email">
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none font-body-md" id="email" name="email" placeholder="you@example.com" required="" type="email">
 </div>
 <div class="space-y-1.5">
 <label class="font-label-md text-on-surface-variant" for="interest">Area of Interest</label>
-<select class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none" id="interest" name="interest">
+<select class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none font-body-md" id="interest" name="interest">
 <option value="mental-clarity">Mental Clarity &amp; Focus</option>
 <option value="performance">Executive Performance</option>
 <option value="balance">Life Balance &amp; Resilience</option>
@@ -213,7 +218,7 @@
 </div>
 <div class="space-y-1.5">
 <label class="font-label-md text-on-surface-variant" for="question">Your Message *</label>
-<textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none" id="question" name="question" placeholder="How can we assist you today?" required="" rows="4"></textarea>
+<textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-0 rounded-lg p-3 transition-all outline-none font-body-md" id="question" name="question" placeholder="How can we assist you today?" required="" rows="4"></textarea>
 </div>
 <div class="pt-2">
 <button class="w-full md:w-auto bg-primary text-on-primary px-10 py-3.5 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors uppercase tracking-wider flex items-center justify-center gap-2" type="submit">
@@ -228,70 +233,27 @@
 </div>
 </div>
 </section>
-<!-- Direct Support Section -->
-<section class="bg-surface-container-low py-xl">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row gap-xl items-center">
-<div class="w-full md:w-1/2 relative">
-<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg transform -rotate-1">
-<img class="w-full h-full object-cover" data-alt="Mindfulness session in a professional space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSqPfyXnYGoc_mCZ7dGPiK8yxBCMRGx0KjpS_CzRAYaUKb8wDN1ZsWpJ9r5g3fWWul0u7IDKRB5ayk_zZ_fa-B7umBowy4vFcvm356RsZubhphMko8DnCXXuZRDzsi4bFMWNn-l8YcxGj6BSLG_9i_fJgR-1MJYXHO7nWez2SJMae46zLqmPMiQvQ1HKbPXKfgyEFCPXOwP2m5Ar8pVcU1d_sJb7vzguhOEU1pnDN92NgDYJmkr2UeIGtvL7T-41vufSL3ve6cbQ">
-</div>
-<div class="absolute -bottom-4 -right-4 p-6 bg-surface-container-lowest border border-outline-variant shadow-xl max-w-[260px] hidden md:block rounded-xl">
-<p class="font-label-sm text-primary uppercase mb-2">Impact Data</p>
-<p class="font-body-sm text-on-surface">94% of participants report sustained performance gains within 3 months.</p>
-</div>
-</div>
-<div class="w-full md:w-1/2 space-y-4">
-<h2 class="font-headline-lg text-on-surface">Immediate Concierge Support</h2>
-<p class="font-body-lg text-on-surface-variant">Prefer a more direct conversation? Our concierge team is available via WhatsApp for rapid responses. We value your privacy and maintain strict confidentiality standards.</p>
-<div class="pt-4">
-<a class="inline-flex items-center gap-3 px-8 py-3.5 border-2 border-primary text-primary rounded-lg font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="phone_iphone">phone_iphone</span>
-                                Chat with us
-                            </a>
-</div>
-</div>
-</div>
-</div>
-</section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-highest border-t border-outline-variant">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-10">
-<div class="col-span-1 md:col-span-2">
-<div class="font-headline-md text-primary mb-4">The Freedom Program</div>
-<p class="text-on-surface-variant max-w-sm font-body-sm">Advancing human performance through clinical precision and sustainable wellness strategies.</p>
+<footer class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container text-on-surface-variant border-t border-outline-variant">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">The Freedom Program</span>
+<p class="font-body-sm">© 2024 The Freedom Program. Elite Transformation &amp; Wellness.</p>
 </div>
-<div>
-<h4 class="font-label-md text-on-surface mb-4 uppercase">Program</h4>
-<div class="flex flex-col gap-2 font-body-sm text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="#">Curriculum</a>
-<a class="hover:text-primary transition-colors" href="#">Corporate</a>
+<div class="flex flex-wrap justify-center gap-gutter">
 <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-</div>
-</div>
-<div>
-<h4 class="font-label-md text-on-surface mb-4 uppercase">Social</h4>
-<div class="flex flex-col gap-2 font-body-sm text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
-<a class="hover:text-primary transition-colors" href="#">Twitter/X</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="./enquiry.html">Contact</a>
 <a class="hover:text-primary transition-colors" href="#">Instagram</a>
-</div>
-</div>
-</div>
-<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant gap-4">
-<div class="flex gap-4 font-caption text-label-sm text-on-surface-variant">
-<button class="hover:text-primary">Global Locations</button>
-<span class="text-outline-variant">|</span>
-<button class="hover:text-primary">Accessibility</button>
-</div>
-<div class="font-label-sm text-on-surface-variant text-center">© 2024 The Freedom Program. Clinical Wellness &amp; Executive Performance.</div>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
 </div>
 </footer>
-<!-- Floating CTA -->
-<a class="fixed bottom-6 right-6 z-40 bg-secondary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 hover:bg-on-secondary-container transition-all group" href="#" title="Support Chat">
-<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" data-icon="support_agent">support_agent</span>
-<span class="absolute right-full mr-4 bg-on-surface text-white px-4 py-2 rounded-lg text-sm font-label-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">Need help?</span>
+<!-- FAB: Floating CTA -->
+<a href="./booking.html#discovery-call" class="fixed bottom-margin-mobile right-margin-mobile z-50">
+<button class="group flex items-center gap-3 bg-secondary text-on-secondary px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-all border-4 border-surface">
+<span class="font-label-md text-label-md font-bold">Complimentary 30 min Call</span>
+<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
+</button>
 </a>
 <script>
         // Form Interactivity
@@ -327,6 +289,4 @@
             }
         });
     </script>
-
-
 </body></html>
